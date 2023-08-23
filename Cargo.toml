@@ -1,17 +1,28 @@
 [package]
 name = "arduino_blink_rs"
 version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+edition = "2018"
 
 [dependencies]
 panic-halt = "0.2.0"
 
 [dependencies.arduino-hal]
 git = "https://github.com/Rahix/avr-hal"
+features = ["arduino-uno"]
 
 [profile.dev]
-opt-level = "s"
+panic = "abort"
 lto = true
+opt-level = "s"
+
+[profile.release]
+panic = "abort"
 codegen-units = 1
+debug = true
+lto = true
+opt-level = "s"
+
+# [profile.dev]
+# opt-level = "s"
+# lto = true
+# codegen-units = 1

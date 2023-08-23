@@ -18,6 +18,8 @@
           binutils
           gcc
           avrdude
+          ravedude
+          simavr
         ];
       in pkgs.mkShell {
         name = "arduino_blink_rs_shell";
