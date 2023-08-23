@@ -7,5 +7,6 @@ This is mostly an example thing, I wanted to combine embedded Rust with Nix.
 
 ### To-do:
 - [x] Wait for [upstream changes](https://reviews.llvm.org/D152059) in LLVM to solve the compilation issue
-- [ ] Figure out the proper way to compile this for the target
+- [x] Figure out the proper way to compile this for the target
+- [ ] Test the binary on an actual board
 - [ ] Get rid of the hardcoded `system = "x86_64-linux"` in flake.nix
