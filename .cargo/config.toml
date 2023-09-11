@@ -2,9 +2,9 @@
 target = "./avr-atmega328p.json"
 
 [target.'cfg(target_arch = "avr")']
-# runner = "ravedude uno -cb 57600"
+runner = "sudo ravedude uno -cb 57600"
 # To run in simulator, replace the line above with this:
-runner = "simavr -m atmega328p"
+# runner = "simavr -m atmega328p"
 
 [unstable]
 build-std = ["core"]
