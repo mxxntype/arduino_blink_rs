@@ -3,6 +3,19 @@ name = "arduino_blink_rs"
 version = "0.1.0"
 edition = "2018"
 
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+pedantic = "deny"
+nursery = "deny"
+complexity = "deny"
+perf = "deny"
+enum_glob_use = { level = "deny", priority = 1 }
+single_match_else = { level = "allow", priority = 1 }
+option_if_let_else = { level = "allow", priority = 1 }
+or_fun_call = { level = "allow", priority = 1 }
+
 [dependencies]
 panic-halt = "0.2.0"
 
